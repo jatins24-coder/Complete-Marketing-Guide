@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Marketing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5fcff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-weight: bold;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .example-box {
+      background: #e3f2fd;
+      padding: 15px;
+      border-left: 4px solid #2196f3;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body onload="initAnimation()">
+  <header>
+    <h1 class="animated-title">Content Marketing</h1>
+    <p class="lead animated-subtitle">Creating and distributing valuable content to attract and retain audience</p>
+  </header>
+
+  <section class="content container">
+    <h3>What is Content Marketing?</h3>
+    <p>
+      Content marketing is a long-term strategy focused on building a strong relationship with your target audience by providing them with high-quality content that is relevant and consistent.
+    </p>
+
+    <h4>Key Strategies:</h4>
+    <ul>
+      <li><strong>Blogging:</strong> Regular informative posts to engage readers</li>
+      <li><strong>Video Content:</strong> YouTube, tutorials, webinars</li>
+      <li><strong>Ebooks & Guides:</strong> In-depth content offering expertise</li>
+    </ul>
+
+    <div class="chart-container">
+      <canvas id="contentChart"></canvas>
+    </div>
+
+    <h4>📚 Case Study: HubSpot</h4>
+    <p>
+      HubSpot built its brand by creating a massive library of blog posts, ebooks, videos, and free courses — becoming an authority in inbound marketing and content strategy.
+    </p>
+
+    <h4>📝 Examples</h4>
+    <div class="example-box">
+      <strong>Example 1:</strong> A travel website posts destination guides and travel tips to attract potential customers.
+    </div>
+    <div class="example-box">
+      <strong>Example 2:</strong> A skincare brand creates how-to video tutorials and product explainer videos on YouTube.
+    </div>
+
+    <h4>📊 Comparison Tables</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Content Marketing</th>
+          <th>Traditional Advertising</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Long-term engagement</td><td>Short-term visibility</td></tr>
+        <tr><td>Educational & informative</td><td>Sales-driven messaging</td></tr>
+        <tr><td>Audience focused</td><td>Brand focused</td></tr>
+      </tbody>
+    </table>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Blogs</th>
+          <th>Videos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>SEO-friendly</td><td>More engaging</td></tr>
+        <tr><td>Easy to publish regularly</td><td>More production effort</td></tr>
+        <tr><td>Lower cost</td><td>Higher reach on social platforms</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    function initAnimation() {
+      anime({
+        targets: '.animated-title',
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo'
+      });
+      anime({
+        targets: '.animated-subtitle',
+        delay: 300,
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo'
+      });
+    }
+
+    new Chart(document.getElementById('contentChart'), {
+      type: 'pie',
+      data: {
+        labels: ['Blogs', 'Videos', 'Infographics', 'Ebooks'],
+        datasets: [{
+          data: [40, 30, 20, 10],
+          backgroundColor: ['#0072ff', '#2196f3', '#64b5f6', '#bbdefb']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

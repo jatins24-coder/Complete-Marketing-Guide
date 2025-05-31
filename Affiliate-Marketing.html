@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affiliate Marketing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+    header {
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+    .content {
+      padding: 40px 20px;
+    }
+    .chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    table {
+      margin-top: 20px;
+    }
+    .example-box {
+      background: #fff;
+      padding: 15px;
+      border-left: 4px solid #ee0979;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body onload="initAnimation()">
+  <header>
+    <h1 class="animated-title">Affiliate Marketing</h1>
+    <p class="lead animated-subtitle">Earning commissions through referrals and promotions</p>
+  </header>
+
+  <section class="content container">
+    <h3>What is Affiliate Marketing?</h3>
+    <p>Affiliate marketing is a performance-based marketing strategy where individuals earn a commission by promoting other people's or companies' products. Affiliates share unique links and earn money for every sale or action generated via their referral.</p>
+
+    <h4>Key Elements:</h4>
+    <ul>
+      <li><strong>Affiliate:</strong> Promoter of the product</li>
+      <li><strong>Merchant:</strong> Seller or creator of the product</li>
+      <li><strong>Customer:</strong> End user who makes the purchase</li>
+      <li><strong>Affiliate Network:</strong> Platform managing the relationship (optional)</li>
+    </ul>
+
+    <div class="chart-container">
+      <canvas id="affiliateChart"></canvas>
+    </div>
+
+    <h4>📚 Case Study: Pat Flynn</h4>
+    <p>Pat Flynn built Smart Passive Income, generating over $100,000/month through affiliate marketing by sharing honest reviews and transparent earnings reports, building trust with his audience.</p>
+
+    <h4>📝 Examples</h4>
+    <div class="example-box">
+      <strong>Example 1:</strong> A YouTuber links to a tech product with an Amazon affiliate link in the video description.
+    </div>
+    <div class="example-box">
+      <strong>Example 2:</strong> A blogger earns commissions by reviewing fitness supplements and sharing links.
+    </div>
+
+    <h4>📊 Comparison Tables</h4>
+    <table class="table table-bordered">
+      <thead><tr><th>Affiliate</th><th>Influencer</th></tr></thead>
+      <tbody>
+        <tr><td>Focus on links and tracking</td><td>Focus on influence and audience</td></tr>
+        <tr><td>Passive income potential</td><td>More brand collaborations</td></tr>
+        <tr><td>Requires niche targeting</td><td>Requires broad appeal</td></tr>
+      </tbody>
+    </table>
+
+    <table class="table table-bordered">
+      <thead><tr><th>Affiliate</th><th>Direct Sales</th></tr></thead>
+      <tbody>
+        <tr><td>No inventory needed</td><td>Handles inventory</td></tr>
+        <tr><td>Performance-based payout</td><td>Full profit margin</td></tr>
+        <tr><td>Low entry barrier</td><td>High management</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    function initAnimation() {
+      anime({
+        targets: '.animated-title',
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        duration: 1000
+      });
+      anime({
+        targets: '.animated-subtitle',
+        delay: 300,
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        duration: 1000
+      });
+    }
+
+    new Chart(document.getElementById('affiliateChart'), {
+      type: 'pie',
+      data: {
+        labels: ['Product Reviews', 'How-to Blogs', 'YouTube', 'Social Media'],
+        datasets: [{
+          label: 'Affiliate Channels',
+          data: [30, 25, 25, 20],
+          backgroundColor: ['#ff6a00', '#ee0979', '#ff8c42', '#ec38bc']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

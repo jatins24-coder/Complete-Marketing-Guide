@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Marketing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f8ff;
+    }
+    header {
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    .example-box {
+      background: #fff3e0;
+      padding: 15px;
+      border-left: 4px solid #ee0979;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .chart-container {
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body onload="initAnimation()">
+  <header>
+    <h1 class="animated-title">Event Marketing</h1>
+    <p class="lead animated-subtitle">Build deeper connections with in-person and virtual events</p>
+  </header>
+
+  <section class="content container">
+    <h3>What is Event Marketing?</h3>
+    <p>
+      Event Marketing involves promoting a brand, product, or service through in-person or virtual events. It creates memorable experiences that connect with audiences on a deeper level.
+    </p>
+
+    <h4>Key Strategies:</h4>
+    <ul>
+      <li><strong>Trade Shows:</strong> Showcase products to industry professionals</li>
+      <li><strong>Webinars:</strong> Educate and engage virtually</li>
+      <li><strong>Product Launches:</strong> Generate buzz and anticipation</li>
+    </ul>
+
+    <div class="chart-container">
+      <canvas id="eventChart"></canvas>
+    </div>
+
+    <h4>📚 Case Study: Salesforce Dreamforce</h4>
+    <p>
+      Dreamforce by Salesforce attracts thousands of attendees yearly, featuring speakers, product announcements, and networking — making it a landmark example of successful event marketing.
+    </p>
+
+    <h4>📝 Examples</h4>
+    <div class="example-box">
+      <strong>Example 1:</strong> A fintech company hosts a virtual summit with guest speakers.
+    </div>
+    <div class="example-box">
+      <strong>Example 2:</strong> A car brand unveils its new model at an international auto expo.
+    </div>
+
+    <h4>📊 Comparison Tables</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr><th>Event Type</th><th>Purpose</th><th>Target Audience</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Trade Show</td><td>Lead generation</td><td>B2B</td></tr>
+        <tr><td>Webinar</td><td>Education</td><td>B2B & B2C</td></tr>
+        <tr><td>Product Launch</td><td>Awareness</td><td>General public</td></tr>
+      </tbody>
+    </table>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr><th>Event Marketing</th><th>Social Media Marketing</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Face-to-face engagement</td><td>Online interaction</td></tr>
+        <tr><td>Requires logistics</td><td>Low-cost execution</td></tr>
+        <tr><td>High impact & recall</td><td>Short-term reach</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    function initAnimation() {
+      anime({
+        targets: '.animated-title',
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        duration: 1200,
+        easing: 'easeOutBack'
+      });
+      anime({
+        targets: '.animated-subtitle',
+        delay: 400,
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        duration: 800,
+        easing: 'easeOutBack'
+      });
+    }
+
+    new Chart(document.getElementById('eventChart'), {
+      type: 'bar',
+      data: {
+        labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
+        datasets: [{
+          label: 'Event Marketing ROI (%)',
+          data: [50, 60, 30, 55, 70, 80],
+          backgroundColor: 'rgba(238,9,121,0.6)',
+          borderColor: '#ee0979',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: true } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Complete Guide to Marketing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+    .hero-section {
+  background-image: url("cover-page-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 20px;
+  text-align: center;
+  color: #000; /* Use white if needed based on your image */
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+
+.hero-section h1,
+.hero-section p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 30px;
+    }
+    .marketing-section {
+      margin-bottom: 30px;
+    }
+    .marketing-section h2 {
+      font-weight: bold;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+    .chart-container {
+      margin: 40px 0;
+    }
+    .equal-img {
+  width: 250px;          /* or 100%, depending on layout */
+  height: 200px;         /* fixed height ensures consistency */
+  object-fit:initial;     /* key property */
+  border-radius: 8px;    /* optional: rounded corners */
+  display: block;
+}
+
+  </style>
+</head>
+<body onload="initAnimations()">
+  <header>
+    <div>
+      <section class = "hero-section">
+      <h1 class="animate-title">The Complete Guide to Marketing</h1>
+      <p class="lead animate-subtitle">Explore all major types of marketing in one professional space</p>
+      </section>
+    </div>
+  </header>
+<section class="container my-5">
+  <h2 class="text-center mb-4">Explore Different Types of Marketing</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col"><a href="digital-marketing.html" class="btn btn-outline-primary w-100">Digital Marketing</a></div>
+    <div class="col"><a href="social-media-marketing.html" class="btn btn-outline-primary w-100">Social Media Marketing</a></div>
+    <div class="col"><a href="email-marketing.html" class="btn btn-outline-primary w-100">Email Marketing</a></div>
+    <div class="col"><a href="sem-marketing.html" class="btn btn-outline-primary w-100">Search Engine Marketing</a></div>
+    <div class="col"><a href="influencer-marketing.html" class="btn btn-outline-primary w-100">Influencer Marketing</a></div>
+    <div class="col"><a href="affiliate-marketing.html" class="btn btn-outline-primary w-100">Affiliate Marketing</a></div>
+    <div class="col"><a href="content-marketing.html" class="btn btn-outline-primary w-100">Content Marketing</a></div>
+    <div class="col"><a href="video-marketing.html" class="btn btn-outline-primary w-100">Video Marketing</a></div>
+    <div class="col"><a href="event-marketing.html" class="btn btn-outline-primary w-100">Event Marketing</a></div>
+    <div class="col"><a href="network-marketing.html" class="btn btn-outline-primary w-100">Network Marketing</a></div>
+    <div class="col"><a href="guerrilla-marketing.html" class="btn btn-outline-primary w-100">Guerrilla Marketing</a></div>
+    <div class="col"><a href="inbound-marketing.html" class="btn btn-outline-primary w-100">Inbound Marketing</a></div>
+  </div>
+</section>
+
+  <section class="container">
+    <div class="row text-center mb-5">
+      <h2> Marketing Insights </h2>
+      <p class="text-muted">Uses and Images</p>
+    </div>
+    <div class="row">
+      <!-- Repeating blocks for marketing types with links -->
+      <!-- These will link to individual internal pages -->
+      <!-- Example block -->
+      <div class="col-md-4 marketing-section">
+        <div class="card p-3">
+          <h4>Traditional Marketing</h4>
+          <p>TV, Radio, Print, Outdoor - the classic forms that laid the foundation.</p>
+          <img src = "traditional-marketing.png" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-4 marketing-section">
+        <div class="card p-3">
+          <h4>Digital Marketing</h4>
+          <p>SEO, PPC, content marketing, social media, and more digital channels.</p>
+          <img src = "digital-marketing.jpg" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-4 marketing-section">
+        <div class="card p-3">
+          <h4>Affiliate Marketing</h4>
+          <p>Promoting others' products/services for a commission using referral links.</p>
+          <img src = "affiliate-marketing.jpg" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-4 marketing-section">
+        <div class="card p-3">
+          <h4>Influencer Marketing</h4>
+          <p>Collaborating with social media influencers for brand visibility.</p>
+          <img src = "influencer-marketing.jpg" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-4 marketing-section">
+        <div class="card p-3">
+          <h4>Social Media Marketing</h4>
+          <p>Using platforms like Facebook, Instagram, and LinkedIn to connect with audiences.</p>
+          <img src = "social-media-marketing.jpg" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-4 marketing-section">
+        <div class="card p-3">
+          <h4>Email Marketing</h4>
+          <p>Direct communication to users’ inboxes for engagement and conversion.</p>
+          <img src = "email-marketing.webp" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-4 marketing-section">
+        <div class="card p-3">
+          <h4>Content Marketing</h4>
+          <p>Creating valuable content like blogs, videos, and infographics to attract leads.</p>
+          <img src = "content-marketing.jpg" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-4 marketing-section">
+        <div class="card p-3">
+          <h4>Guerrilla Marketing</h4>
+          <p>Unconventional, creative campaigns to grab attention in public spaces.</p>
+          <img src = "guerilla-marketing.jpg" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-4 marketing-section">
+        <div class="card p-3">
+          <h4>SEO & SEM</h4>
+          <p>Search engine optimization and paid marketing to boost search visibility.</p>
+          <img src = "SEO-SEM-Marketing.jfif" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-6 marketing-section">
+        <div class="card p-3">
+          <h4>Viral Marketing</h4>
+          <p>Creating content with the intention of rapid, massive sharing.</p>
+          <img src = "viral-marketing.webp" class = "equal-img">
+        </div>
+      </div>
+      <div class="col-md-6 marketing-section">
+        <div class="card p-3">
+          <h4>B2B vs B2C Marketing</h4>
+          <p>Business-to-business vs Business-to-consumer approaches and strategies.</p>
+          <img src = "B2B-B2C-marketing.jpg" class = "equal-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container chart-container">
+    <div class="text-center">
+      <h2>Marketing Statistics & Insights</h2>
+      <p class="text-muted">Different trends and data points across marketing types.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><canvas id="chart1"></canvas></div>
+      <div class="col-md-6"><canvas id="chart2"></canvas></div>
+      <div class="col-md-6"><canvas id="chart3"></canvas></div>
+      <div class="col-md-6"><canvas id="chart4"></canvas></div>
+      <div class="col-md-6"><canvas id="chart5"></canvas></div>
+      <div class="col-md-6"><canvas id="chart6"></canvas></div>
+      <div class="col-md-6"><canvas id="chart7"></canvas></div>
+      <div class="col-md-6"><canvas id="chart8"></canvas></div>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 The Complete Marketing Guide | Designed by Gaurav & Jatin</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    function initAnimations() {
+      anime({ targets: '.animate-title', translateY: [-100, 0], opacity: [0, 1], duration: 1200 });
+      anime({ targets: '.animate-subtitle', delay: 300, translateY: [-50, 0], opacity: [0, 1], duration: 1200 });
+    }
+
+    const chartConfigs = [
+      { labels: ['TV', 'Radio', 'Print', 'Billboards'], data: [40, 25, 20, 15], label: 'Traditional Marketing Reach %' },
+      { labels: ['SEO', 'PPC', 'Social', 'Email'], data: [30, 25, 30, 15], label: 'Digital Spend Distribution' },
+      { labels: ['Amazon', 'Flipkart', 'ShareASale', 'CJ'], data: [45, 30, 15, 10], label: 'Affiliate Platforms Usage %' },
+      { labels: ['Instagram', 'YouTube', 'Twitter', 'LinkedIn'], data: [50, 30, 10, 10], label: 'Influencer Platforms Engagement' },
+      { labels: ['Posts', 'Stories', 'Reels', 'Ads'], data: [35, 25, 30, 10], label: 'Social Media Formats' },
+      { labels: ['Promotions', 'Newsletters', 'Cold Emails', 'Follow-ups'], data: [20, 30, 25, 25], label: 'Email Tactics' },
+      { labels: ['Blogs', 'Infographics', 'Videos', 'eBooks'], data: [30, 20, 35, 15], label: 'Content Marketing Methods' },
+      { labels: ['Offline', 'Viral Stunts', 'Flash Mobs', 'Stickers'], data: [25, 30, 25, 20], label: 'Guerrilla Marketing Tactics' }
+    ];
+
+    chartConfigs.forEach((config, i) => {
+      new Chart(document.getElementById(`chart${i + 1}`), {
+        type: i % 2 === 0 ? 'bar' : 'pie',
+        data: {
+          labels: config.labels,
+          datasets: [{ label: config.label, data: config.data, backgroundColor: ["#007bff", "#6c757d", "#28a745", "#ffc107"] }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: true } }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

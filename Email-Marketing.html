@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Marketing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+    header {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .example-box {
+      background: #e0e7ff;
+      padding: 15px;
+      border-left: 4px solid #5a67d8;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .chart-container {
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body onload="initAnimation()">
+  <header>
+    <h1 class="animated-title">Email Marketing</h1>
+    <p class="lead animated-subtitle">Personalized, permission-based communication through emails</p>
+  </header>
+
+  <section class="content container">
+    <h3>What is Email Marketing?</h3>
+    <p>
+      Email marketing is the practice of sending targeted messages or newsletters to a group of subscribers via email. It’s one of the highest ROI marketing channels, perfect for building customer relationships, retention, and driving conversions.
+    </p>
+
+    <h4>Key Aspects:</h4>
+    <ul>
+      <li><strong>Personalized Campaigns:</strong> Tailored content based on user behavior</li>
+      <li><strong>Automated Workflows:</strong> Drip campaigns, welcome emails, re-engagement emails</li>
+      <li><strong>Segmentation:</strong> Sending relevant messages to segmented audiences</li>
+    </ul>
+
+    <div class="chart-container">
+      <canvas id="emailChart"></canvas>
+    </div>
+
+    <h4>📚 Case Study: Airbnb</h4>
+    <p>
+      Airbnb uses personalized emails to recommend destinations, offer rebooking reminders, and share user-generated stories, boosting both engagement and bookings.
+    </p>
+
+    <h4>📝 Examples</h4>
+    <div class="example-box">
+      <strong>Example 1:</strong> An e-commerce site sends personalized product recommendations based on past purchases.
+    </div>
+    <div class="example-box">
+      <strong>Example 2:</strong> A fitness app emails weekly progress reports and motivational tips to its users.
+    </div>
+
+    <h4>📊 Comparison Tables</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Email Marketing</th>
+          <th>SMS Marketing</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Cost-effective</td><td>More expensive per message</td></tr>
+        <tr><td>Rich media support</td><td>Plain text mostly</td></tr>
+        <tr><td>Detailed analytics</td><td>Limited tracking</td></tr>
+      </tbody>
+    </table>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Transactional Emails</th>
+          <th>Promotional Emails</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Order confirmations, receipts</td><td>Sale offers, newsletters</td></tr>
+        <tr><td>Triggered by actions</td><td>Scheduled campaigns</td></tr>
+        <tr><td>Expected by users</td><td>Optional but enticing</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    function initAnimation() {
+      anime({
+        targets: '.animated-title',
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo'
+      });
+      anime({
+        targets: '.animated-subtitle',
+        delay: 300,
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo'
+      });
+    }
+
+    new Chart(document.getElementById('emailChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Promotions', 'Transactional', 'Newsletters', 'Abandoned Cart'],
+        datasets: [{
+          data: [45, 25, 20, 10],
+          backgroundColor: ['#764ba2', '#a084dc', '#b8aaff', '#d9d0ff']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
